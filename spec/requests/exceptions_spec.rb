@@ -17,6 +17,6 @@ describe 'post a quote route with exception handlers', :type => :request do
   end
 
   it 'returns a RecordInvalid error' do
-    expect(response).to have_http_status(422)
+    expect(response).to have_http_status(:unprocessable_entity)
   end
 end
